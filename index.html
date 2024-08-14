@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Guay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="titulo">Temas</h1>
+    <label>Tema:
+      <select data-theme-picker name="themepicker" id="theme">
+        <option value="💻">💻 Por defecto</option>
+        <option value="☀️">☀️ Clarito</option>
+        <option value="🌑">🌑 Oscuro</option>
+        <option value="🙃">🙃 Graciosito</option>
+        <option value="🎷">🎷 Jazz</option>
+      </select>
+
+      
+
+    </label>
+    
+    <script>
+
+      const audio = new Audio ('Careless Whisper.mp3');
+      audio.preload = 'auto';
+
+      document.getElementById("theme").addEventListener("change", (event) => {
+        const selectedTheme = event.target.value;
+
+        if (selectedTheme === '🎷') {
+          openPageAndPlayMusic('sexy.html');
+        }
+
+      });
+
+      function openPageAndPlayMusic(url) {
+
+       audio.play();
+      
+        setTimeout(() => {
+          window.location.href = url;
+        },);
+      }
+      
+
+
+
+    </script>
+
+
+    <br>
+    <br>
+    <br>
+    <br>   
+    <br>
+    
+    <div class="with-scrollbar">
+        <div class="with-scrollbar-content">
+      <p>Pagina prueba</p>
+      <p>Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, </p>
+      <p>Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, </p>
+      <p>Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, Es una pagina de prueba, </p>
+    </div> 
+</div>
+
+<br>
+<br>
+
+
+
+</body>
+</html>
